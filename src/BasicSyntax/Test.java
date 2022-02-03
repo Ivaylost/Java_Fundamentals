@@ -2,7 +2,7 @@ package BasicSyntax;
 
 public class Test {
     public static void main(String[] args) {
-        int num = 2;
-        System.out.printf("%08d%n", 2);
+        String s = "IvAilO";
+        System.out.println(s.substring(0,2).toLowerCase());
     }
 }

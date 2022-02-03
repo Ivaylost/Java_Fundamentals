@@ -13,6 +13,9 @@ public class BeerKegs {
         int h = 0;
         double volume = 0;
 
+
+
+
         for (int i = 0; i < n; i++) {
             model = scanner.nextLine();;
             r = Double.parseDouble(scanner.nextLine());
