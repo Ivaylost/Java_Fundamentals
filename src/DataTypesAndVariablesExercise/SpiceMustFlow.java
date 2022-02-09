@@ -22,7 +22,7 @@ public class SpiceMustFlow {
         B = BigInteger.valueOf(26);
         System.out.println(counter);
 
-        if ((sum.subtract(B)).compareTo(A)) > -1){
+        if (((sum.subtract(B)).compareTo(A)) > -1){
             System.out.println(0);
         } else {
             System.out.println(sum.subtract(B));
