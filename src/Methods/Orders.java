@@ -14,12 +14,22 @@ public class Orders {
     }
 
     public static double getPrice(String product){
+        double price = 0;
+        //String x = "coffee";
         switch (product){
-            case "coffee" : return 1.50;
-            case "water " : return 1.00;
-            case "coke" : return 1.40;
-            case "snacks" : return 2.00;
+            case "coffee" :
+                price = 1.50;
+                break;
+            case "water" :
+                price = 1.00;
+                break;
+            case "coke" :
+                price = 1.40;
+                break;
+            case "snacks" :
+                price = 2.00;
+                break;
         }
-        return 0;
+        return price;
     }
 }
