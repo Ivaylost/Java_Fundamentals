@@ -19,7 +19,6 @@ public class VehicleCatalog {
         }
 
         String line = sc.nextLine();
-        System.out.println();
         while (!line.equals("Close the Catalogue"))
         {
             String model = line;
@@ -41,6 +40,13 @@ public class VehicleCatalog {
 
         Double avgTrucksHP = trucks.stream().mapToDouble(Vehicle::getHorsePower)
                 .sum() / trucks.size();
+
+        if (trucks.size() == 0){
+            avgTrucksHP = 0.0;
+        }
+        if (cars.size() == 0){
+            avgCarsHP = 0.0;
+        }
 
         System.out.printf("Cars have average horsepower of: %.2f.\n", avgCarsHP);
         System.out.printf("Trucks have average horsepower of: %.2f.\n", avgTrucksHP);
@@ -80,7 +86,7 @@ public class VehicleCatalog {
         @Override
         public String toString() {
             return String.format("Type: %s\nModel: %s\nColor: %s\nHorsepower: %d",
-                    this.getType(), this.getModel(), this.getColor(), this.getHorsePower());
+                    Character.toUpperCase(this.getType().charAt(0)) + this.getType().substring(1), this.getModel(), this.getColor(), this.getHorsePower());
         }
     }
 }
